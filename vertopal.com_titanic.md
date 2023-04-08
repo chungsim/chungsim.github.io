@@ -18,35 +18,26 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 13.119041
-    end_time: "2023-04-07T07:05:30.686117"
+    duration: 15.018739
+    end_time: "2023-04-07T14:40:08.919559"
     environment_variables: {}
     input_path: \_\_notebook\_\_.ipynb
     output_path: \_\_notebook\_\_.ipynb
     parameters: {}
-    start_time: "2023-04-07T07:05:17.567076"
+    start_time: "2023-04-07T14:39:53.900820"
     version: 2.4.0
 ---
 
-::: {#5bae0d58 .cell .code execution_count="1" _cell_guid="a17ad9c0-be84-481c-81c0-27746860558c" _uuid="213e5099-39ab-4bc3-9007-99009f7563d7" collapsed="false" execution="{\"iopub.execute_input\":\"2023-04-07T07:05:28.144418Z\",\"iopub.status.busy\":\"2023-04-07T07:05:28.143998Z\",\"iopub.status.idle\":\"2023-04-07T07:05:28.159092Z\",\"shell.execute_reply\":\"2023-04-07T07:05:28.157884Z\"}" jupyter="{\"outputs_hidden\":false}" papermill="{\"duration\":2.3528e-2,\"end_time\":\"2023-04-07T07:05:28.162121\",\"exception\":false,\"start_time\":\"2023-04-07T07:05:28.138593\",\"status\":\"completed\"}" tags="[]"}
+::: {#6ffa3c6f .cell .code execution_count="1" _cell_guid="a17ad9c0-be84-481c-81c0-27746860558c" _uuid="213e5099-39ab-4bc3-9007-99009f7563d7" collapsed="false" execution="{\"iopub.execute_input\":\"2023-04-07T14:40:05.532170Z\",\"iopub.status.busy\":\"2023-04-07T14:40:05.531688Z\",\"iopub.status.idle\":\"2023-04-07T14:40:05.546589Z\",\"shell.execute_reply\":\"2023-04-07T14:40:05.545728Z\"}" jupyter="{\"outputs_hidden\":false}" papermill="{\"duration\":2.6686e-2,\"end_time\":\"2023-04-07T14:40:05.550323\",\"exception\":false,\"start_time\":\"2023-04-07T14:40:05.523637\",\"status\":\"completed\"}" tags="[]"}
 ``` python
-# This Python 3 environment comes with many helpful analytics libraries installed
-# It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python
-# For example, here's several helpful packages to load
 
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
-
-# Input data files are available in the read-only "../input/" directory
-# For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory
 
 import os
 for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
-
-# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using "Save & Run All" 
-# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session
 ```
 
 ::: {.output .stream .stdout}
@@ -56,7 +47,7 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 :::
 :::
 
-::: {#5a43aa0f .cell .code execution_count="2" execution="{\"iopub.execute_input\":\"2023-04-07T07:05:28.169666Z\",\"iopub.status.busy\":\"2023-04-07T07:05:28.168972Z\",\"iopub.status.idle\":\"2023-04-07T07:05:28.213712Z\",\"shell.execute_reply\":\"2023-04-07T07:05:28.212494Z\"}" papermill="{\"duration\":5.1488e-2,\"end_time\":\"2023-04-07T07:05:28.216541\",\"exception\":false,\"start_time\":\"2023-04-07T07:05:28.165053\",\"status\":\"completed\"}" tags="[]"}
+::: {#9f9b7c35 .cell .code execution_count="2" execution="{\"iopub.execute_input\":\"2023-04-07T14:40:05.561380Z\",\"iopub.status.busy\":\"2023-04-07T14:40:05.560941Z\",\"iopub.status.idle\":\"2023-04-07T14:40:05.621661Z\",\"shell.execute_reply\":\"2023-04-07T14:40:05.620518Z\"}" papermill="{\"duration\":7.0091e-2,\"end_time\":\"2023-04-07T14:40:05.625303\",\"exception\":false,\"start_time\":\"2023-04-07T14:40:05.555212\",\"status\":\"completed\"}" tags="[]"}
 ``` python
 train_data = pd.read_csv("/kaggle/input/titanic/train.csv")
 train_data.head()
@@ -179,7 +170,7 @@ train_data.head()
 :::
 :::
 
-::: {#25d16f71 .cell .code execution_count="3" execution="{\"iopub.execute_input\":\"2023-04-07T07:05:28.224368Z\",\"iopub.status.busy\":\"2023-04-07T07:05:28.223659Z\",\"iopub.status.idle\":\"2023-04-07T07:05:28.246762Z\",\"shell.execute_reply\":\"2023-04-07T07:05:28.245510Z\"}" papermill="{\"duration\":2.9803e-2,\"end_time\":\"2023-04-07T07:05:28.249366\",\"exception\":false,\"start_time\":\"2023-04-07T07:05:28.219563\",\"status\":\"completed\"}" tags="[]"}
+::: {#6b946fd5 .cell .code execution_count="3" execution="{\"iopub.execute_input\":\"2023-04-07T14:40:05.636981Z\",\"iopub.status.busy\":\"2023-04-07T14:40:05.636329Z\",\"iopub.status.idle\":\"2023-04-07T14:40:05.663556Z\",\"shell.execute_reply\":\"2023-04-07T14:40:05.662116Z\"}" papermill="{\"duration\":3.6882e-2,\"end_time\":\"2023-04-07T14:40:05.666860\",\"exception\":false,\"start_time\":\"2023-04-07T14:40:05.629978\",\"status\":\"completed\"}" tags="[]"}
 ``` python
 test_data = pd.read_csv("/kaggle/input/titanic/test.csv")
 test_data.head()
@@ -296,7 +287,7 @@ test_data.head()
 :::
 :::
 
-::: {#279a9fad .cell .code execution_count="4" execution="{\"iopub.execute_input\":\"2023-04-07T07:05:28.257450Z\",\"iopub.status.busy\":\"2023-04-07T07:05:28.257012Z\",\"iopub.status.idle\":\"2023-04-07T07:05:28.269885Z\",\"shell.execute_reply\":\"2023-04-07T07:05:28.268484Z\"}" papermill="{\"duration\":1.9591e-2,\"end_time\":\"2023-04-07T07:05:28.272295\",\"exception\":false,\"start_time\":\"2023-04-07T07:05:28.252704\",\"status\":\"completed\"}" tags="[]"}
+::: {#e2dfb4b4 .cell .code execution_count="4" execution="{\"iopub.execute_input\":\"2023-04-07T14:40:05.678784Z\",\"iopub.status.busy\":\"2023-04-07T14:40:05.678249Z\",\"iopub.status.idle\":\"2023-04-07T14:40:05.693229Z\",\"shell.execute_reply\":\"2023-04-07T14:40:05.691796Z\"}" papermill="{\"duration\":2.4745e-2,\"end_time\":\"2023-04-07T14:40:05.696372\",\"exception\":false,\"start_time\":\"2023-04-07T14:40:05.671627\",\"status\":\"completed\"}" tags="[]"}
 ``` python
 women = train_data.loc[train_data.Sex == 'female']['Survived']
 rate_women = sum(women)/len(women)
@@ -308,7 +299,7 @@ print(rate_women)
 :::
 :::
 
-::: {#e2ec728c .cell .code execution_count="5" execution="{\"iopub.execute_input\":\"2023-04-07T07:05:28.280901Z\",\"iopub.status.busy\":\"2023-04-07T07:05:28.279985Z\",\"iopub.status.idle\":\"2023-04-07T07:05:28.289183Z\",\"shell.execute_reply\":\"2023-04-07T07:05:28.287865Z\"}" papermill="{\"duration\":1.5835e-2,\"end_time\":\"2023-04-07T07:05:28.291387\",\"exception\":false,\"start_time\":\"2023-04-07T07:05:28.275552\",\"status\":\"completed\"}" tags="[]"}
+::: {#9e3ef264 .cell .code execution_count="5" execution="{\"iopub.execute_input\":\"2023-04-07T14:40:05.708815Z\",\"iopub.status.busy\":\"2023-04-07T14:40:05.708268Z\",\"iopub.status.idle\":\"2023-04-07T14:40:05.718334Z\",\"shell.execute_reply\":\"2023-04-07T14:40:05.716252Z\"}" papermill="{\"duration\":2.0605e-2,\"end_time\":\"2023-04-07T14:40:05.721903\",\"exception\":false,\"start_time\":\"2023-04-07T14:40:05.701298\",\"status\":\"completed\"}" tags="[]"}
 ``` python
 men = train_data.loc[train_data.Sex == 'male']['Survived']
 rate_men = sum(men)/len(men)
@@ -320,7 +311,7 @@ print(rate_men)
 :::
 :::
 
-::: {#04e21663 .cell .code execution_count="6" execution="{\"iopub.execute_input\":\"2023-04-07T07:05:28.300071Z\",\"iopub.status.busy\":\"2023-04-07T07:05:28.298895Z\",\"iopub.status.idle\":\"2023-04-07T07:05:29.957828Z\",\"shell.execute_reply\":\"2023-04-07T07:05:29.956726Z\"}" papermill="{\"duration\":1.666197,\"end_time\":\"2023-04-07T07:05:29.960829\",\"exception\":false,\"start_time\":\"2023-04-07T07:05:28.294632\",\"status\":\"completed\"}" tags="[]"}
+::: {#48dc21e5 .cell .code execution_count="6" execution="{\"iopub.execute_input\":\"2023-04-07T14:40:05.733493Z\",\"iopub.status.busy\":\"2023-04-07T14:40:05.732883Z\",\"iopub.status.idle\":\"2023-04-07T14:40:07.684132Z\",\"shell.execute_reply\":\"2023-04-07T14:40:07.682577Z\"}" papermill="{\"duration\":1.961942,\"end_time\":\"2023-04-07T14:40:07.687820\",\"exception\":false,\"start_time\":\"2023-04-07T14:40:05.725878\",\"status\":\"completed\"}" tags="[]"}
 ``` python
 from sklearn.ensemble import RandomForestClassifier
 
