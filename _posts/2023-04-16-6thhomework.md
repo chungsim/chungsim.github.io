@@ -56,67 +56,38 @@ jupyter:
 ::: {.cell .markdown}
 # **2. Logistic Regression intuition** `<a class="anchor" id="2">`{=html}`</a>`{=html} {#2-logistic-regression-intuition-}
 
-[Table of Contents](#0.1)
+통계학에서 로지스틱 회귀 모형은 주로 분류 목적으로 사용되는 널리 사용되는 통계 모형입니다. 즉, 관측치 집합이 주어지면 로지스틱 회귀 알고리즘을 사용하여 관측치를 두 개 이상의 이산 클래스로 분류할 수 있습니다. 따라서 대상 변수는 본질적으로 이산적입니다.
 
-In statistics, the **Logistic Regression model** is a widely used
-statistical model which is primarily used for classification purposes.
-It means that given a set of observations, Logistic Regression algorithm
-helps us to classify these observations into two or more discrete
-classes. So, the target variable is discrete in nature.
+로지스틱 회귀 분석 알고리즘은 다음과 같이 작동합니다
 
-The Logistic Regression algorithm works as follows -
-:::
-
-::: {.cell .markdown}
 ## **Implement linear equation**
 
-Logistic Regression algorithm works by implementing a linear equation
-with independent or explanatory variables to predict a response value.
-For example, we consider the example of number of hours studied and
-probability of passing the exam. Here, number of hours studied is the
-explanatory variable and it is denoted by x1. Probability of passing the
-exam is the response or target variable and it is denoted by z.
+로지스틱 회귀 분석 알고리즘은 반응 값을 예측하기 위해 독립 변수 또는 설명 변수가 있는 선형 방정식을 구현하는 방식으로 작동합니다. 예를 들어, 우리는 공부한 시간의 수와 시험에 합격할 확률의 예를 고려합니다. 여기서 연구된 시간 수는 설명 변수이며 x1로 표시됩니다. 합격 확률은 반응 변수 또는 목표 변수이며 z로 표시됩니다.
 
-If we have one explanatory variable (x1) and one response variable (z),
-then the linear equation would be given mathematically with the
-following equation-
+만약 우리가 하나의 설명 변수(x1)와 하나의 반응 변수(z)를 가지고 있다면, 선형 방정식은 다음과 같은 방정식으로 수학적으로 주어질 것입니다
 
     z = β0 + β1x1    
 
-Here, the coefficients β0 and β1 are the parameters of the model.
+여기서 계수 β0과 β1은 모형의 모수입니다.
 
-If there are multiple explanatory variables, then the above equation can
-be extended to
+설명 변수가 여러 개인 경우, 위의 방정식은 다음과 같이 확장될 수 있습니다
 
     z = β0 + β1x1+ β2x2+……..+ βnxn
 
-Here, the coefficients β0, β1, β2 and βn are the parameters of the
-model.
+여기서 계수 β0, β1, β2 및 βn은 모델의 매개변수입니다.
 
-So, the predicted response value is given by the above equations and is
-denoted by z.
-:::
+따라서 예측 반응 값은 위의 방정식에 의해 주어지며 z로 표시됩니다.
 
-::: {.cell .markdown}
 ## **Sigmoid Function**
 
-This predicted response value, denoted by z is then converted into a
-probability value that lie between 0 and 1. We use the sigmoid function
-in order to map predicted values to probability values. This sigmoid
-function then maps any real value into a probability value between 0 and
-1.
+z로 표시된 이 예측 반응 값은 0과 1 사이에 있는 확률 값으로 변환됩니다. 우리는 예측 값을 확률 값에 매핑하기 위해 시그모이드 함수를 사용합니다. 그런 다음 이 시그모이드 함수는 실제 값을 0과 1 사이의 확률 값으로 매핑합니다.
 
-In machine learning, sigmoid function is used to map predictions to
-probabilities. The sigmoid function has an S shaped curve. It is also
-called sigmoid curve.
+기계 학습에서 시그모이드 함수는 예측을 확률에 매핑하는 데 사용됩니다. 시그모이드 함수는 S자형 곡선을 가지고 있습니다. 그것은 시그모이드 곡선이라고도 불립니다.
 
-A Sigmoid function is a special case of the Logistic function. It is
-given by the following mathematical formula.
+Sigmoid 함수는 로지스틱 함수의 특수한 경우입니다. 그것은 다음과 같은 수학 공식에 의해 주어집니다.
 
-Graphically, we can represent sigmoid function with the following graph.
-:::
+다음 그래프로 시그모이드 함수를 그래픽으로 표현할 수 있습니다.
 
-::: {.cell .markdown}
 ### Sigmoid Function {#sigmoid-function}
 
 ![Sigmoid
@@ -126,15 +97,9 @@ Function](vertopal_ca93cbc8c7524834a21e37d8a1959b04/3d802ba40a4e95f9c3e7ba257488
 ::: {.cell .markdown}
 ## **Decision boundary**
 
-The sigmoid function returns a probability value between 0 and 1. This
-probability value is then mapped to a discrete class which is either "0"
-or "1". In order to map this probability value to a discrete class
-(pass/fail, yes/no, true/false), we select a threshold value. This
-threshold value is called Decision boundary. Above this threshold value,
-we will map the probability values into class 1 and below which we will
-map values into class 0.
+시그모이드 함수는 0과 1 사이의 확률 값을 반환합니다. 그런 다음 이 확률 값은 "0" 또는 "1"인 이산 클래스에 매핑됩니다. 이 확률 값을 이산 클래스(통과/실패, 예/아니오, 참/거짓)에 매핑하기 위해 임계값을 선택합니다. 이 임계값을 의사결정 경계라고 합니다. 이 임계값을 초과하면 확률 값을 클래스 1에 매핑하고 클래스 0에 매핑합니다.
 
-Mathematically, it can be expressed as follows:-
+수학적으로 다음과 같이 표현할 수 있습니다
 
 p ≥ 0.5 =\> class = 1
 
