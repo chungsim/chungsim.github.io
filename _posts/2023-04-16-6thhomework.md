@@ -90,11 +90,8 @@ Sigmoid 함수는 로지스틱 함수의 특수한 경우입니다. 그것은 �
 
 ### Sigmoid Function {#sigmoid-function}
 
-![Sigmoid
-Function](vertopal_ca93cbc8c7524834a21e37d8a1959b04/3d802ba40a4e95f9c3e7ba257488dc4da0cd5fe4.png)
-:::
 
-::: {.cell .markdown}
+
 ## **Decision boundary**
 
 시그모이드 함수는 0과 1 사이의 확률 값을 반환합니다. 그런 다음 이 확률 값은 "0" 또는 "1"인 이산 클래스에 매핑됩니다. 이 확률 값을 이산 클래스(통과/실패, 예/아니오, 참/거짓)에 매핑하기 위해 임계값을 선택합니다. 이 임계값을 의사결정 경계라고 합니다. 이 임계값을 초과하면 확률 값을 클래스 1에 매핑하고 클래스 0에 매핑합니다.
@@ -105,93 +102,74 @@ p ≥ 0.5 =\> class = 1
 
 p \< 0.5 =\> class = 0
 
-Generally, the decision boundary is set to 0.5. So, if the probability
-value is 0.8 (\> 0.5), we will map this observation to class 1.
-Similarly, if the probability value is 0.2 (\< 0.5), we will map this
-observation to class 0. This is represented in the graph below-
-:::
+일반적으로 의사 결정 경계는 0.5로 설정됩니다. 그래서, 만약 그 확률이
+값은 0.8(\> 0.5)이며, 이 관측치를 클래스 1에 매핑합니다.
+마찬가지로, 확률 값이 0.2(\< 0.5)이면, 우리는 이것을 매핑할 것입니다
+클래스 0에 대한 관찰. 이것은 아래 그래프에 나와 있습니다
 
-::: {.cell .markdown}
-![Decision boundary in sigmoid
-function](vertopal_ca93cbc8c7524834a21e37d8a1959b04/b7f4443f8c2153c2c7b994d7b8f21de575acf06f.png)
-:::
-
-::: {.cell .markdown}
 ## **Making predictions**
 
-Now, we know about sigmoid function and decision boundary in logistic
-regression. We can use our knowledge of sigmoid function and decision
-boundary to write a prediction function. A prediction function in
-logistic regression returns the probability of the observation being
-positive, Yes or True. We call this as class 1 and it is denoted by
-P(class = 1). If the probability inches closer to one, then we will be
-more confident about our model that the observation is in class 1,
-otherwise it is in class 0.
-:::
+이제, 우리는 로지스틱스에서 시그모이드 함수와 결정 경계에 대해 알고 있습니다
+퇴보. 우리는 시그모이드 함수와 결정에 대한 우리의 지식을 사용할 수 있습니다
+예측 함수를 작성할 경계입니다. 의 예측 함수
+로지스틱 회귀 분석 관측치의 확률을 반환합니다
+긍정, 예 또는 참입니다. 우리는 이것을 클래스 1이라고 부르고 그것은 다음과 같이 표시됩니다
+P(클래스 = 1). 만약 확률이 1인치에 가까우면, 우리는
+우리의 모델에 대해 더 확신을 가지고 관찰은 클래스 1에 있습니다,
+그렇지 않으면 클래스 0에 있습니다.
 
-::: {.cell .markdown}
-# **3. Assumptions of Logistic Regression** `<a class="anchor" id="3">`{=html}`</a>`{=html} {#3-assumptions-of-logistic-regression-}
 
-[Table of Contents](#0.1)
+# **3. Assumptions of Logistic Regression** 
 
-The Logistic Regression model requires several key assumptions. These
-are as follows:-
 
-1.  Logistic Regression model requires the dependent variable to be
-    binary, multinomial or ordinal in nature.
+로지스틱 회귀 분석 모형에는 몇 가지 주요 가정이 필요합니다. 이것들
+다음과 같습니다
 
-2.  It requires the observations to be independent of each other. So,
-    the observations should not come from repeated measurements.
+1. 로지스틱 회귀 분석 모형에서는 종속 변수가 다음과 같아야 합니다
+    본질적으로 이진수, 다항식 또는 서수.
 
-3.  Logistic Regression algorithm requires little or no
-    multicollinearity among the independent variables. It means that the
-    independent variables should not be too highly correlated with each
-    other.
+2. 관측치가 서로 독립적이어야 합니다. 그렇게,
+    관측치는 반복적인 측정값에서 나와서는 안 됩니다.
 
-4.  Logistic Regression model assumes linearity of independent variables
-    and log odds.
+3. 로지스틱 회귀 분석 알고리즘은 거의 또는 전혀 필요하지 않습니다
+    독립 변수 간의 다중 공선성. 그것은 의미는
+    독립 변수는 각 변수와 너무 높은 상관 관계가 없어야 합니다
+    다른.
 
-5.  The success of Logistic Regression model depends on the sample
-    sizes. Typically, it requires a large sample size to achieve the
-    high accuracy.
-:::
+4. 로지스틱 회귀 모형은 독립 변수의 선형성을 가정합니다
+    확률을 기록합니다.
 
-::: {.cell .markdown}
-# **4. Types of Logistic Regression** `<a class="anchor" id="4">`{=html}`</a>`{=html} {#4-types-of-logistic-regression-}
+5. 로지스틱 회귀 분석 모형의 성공 여부는 표본에 따라 다릅니다
+    크기. 일반적으로, 다음을 달성하기 위해서는 큰 표본 크기가 필요합니다
+    높은 정확도.
 
-[Table of Contents](#0.1)
+# **4. Types of Logistic Regression** 
 
-Logistic Regression model can be classified into three groups based on
-the target variable categories. These three groups are described below:-
+로지스틱 회귀 분석 모형은 다음을 기준으로 세 그룹으로 분류할 수 있습니다
+대상 변수 범주. 이 세 그룹은 아래에 설명되어 있습니다
 
-### 1. Binary Logistic Regression {#1-binary-logistic-regression}
+### 1. 이항 로지스틱 회귀 분석 {#1-이항 로지스틱 회귀 분석}
 
-In Binary Logistic Regression, the target variable has two possible
-categories. The common examples of categories are yes or no, good or
-bad, true or false, spam or no spam and pass or fail.
+이항 로지스틱 회귀 분석에서 대상 변수는 두 가지 가능성이 있습니다
+분류. 범주의 일반적인 예는 yes 또는 no, good 또는
+불량, 참 또는 거짓, 스팸 또는 스팸 없음, 통과 또는 실패.
 
-### 2. Multinomial Logistic Regression {#2-multinomial-logistic-regression}
+### 2. 다항 로지스틱 회귀 분석 {#2-다항 로지스틱 회귀 분석}
 
-In Multinomial Logistic Regression, the target variable has three or
-more categories which are not in any particular order. So, there are
-three or more nominal categories. The examples include the type of
-categories of fruits - apple, mango, orange and banana.
+다항 로지스틱 회귀 분석에서 대상 변수는 3개 또는
+특정 순서가 아닌 더 많은 범주. 그래서, 있습니다
+세 개 이상의 공칭 범주. 예에는 다음과 같은 유형이 포함됩니다
+과일의 범주 - 사과, 망고, 오렌지, 바나나.
 
-### 3. Ordinal Logistic Regression {#3-ordinal-logistic-regression}
+### 3. 순서형 로지스틱 회귀 분석 {#3-순서형 로지스틱 회귀 분석}
 
-In Ordinal Logistic Regression, the target variable has three or more
-ordinal categories. So, there is intrinsic order involved with the
-categories. For example, the student performance can be categorized as
-poor, average, good and excellent.
-:::
+순서형 로지스틱 회귀 분석에서 대상 변수는 세 개 이상의 변수를 갖습니다
+서수 범주. 그래서, 본질적인 질서가 관련되어 있습니다
+분류. 예를 들어, 학생들의 성과는 다음과 같이 분류될 수 있습니다
+가난하고, 평균적이고, 좋고, 훌륭합니다.
 
-::: {.cell .markdown}
-# **5. Import libraries** `<a class="anchor" id="5">`{=html}`</a>`{=html} {#5-import-libraries-}
+# **5. Import libraries** 
 
-[Table of Contents](#0.1)
-:::
-
-::: {.cell .code execution_count="1"}
 ``` python
 # This Python 3 environment comes with many helpful analytics libraries installed
 # It is defined by the kaggle/python docker image: https://github.com/kaggle/docker-python
@@ -214,12 +192,6 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 # Any results you write to the current directory are saved as output.
 ```
 
-::: {.output .stream .stdout}
-    /kaggle/input/weather-dataset-rattle-package/weatherAUS.csv
-:::
-:::
-
-::: {.cell .code execution_count="2"}
 ``` python
 import warnings
 
@@ -460,17 +432,13 @@ col_names
            'Temp3pm', 'RainToday', 'RISK_MM', 'RainTomorrow'],
           dtype='object')
 :::
-:::
 
-::: {.cell .markdown}
 ### Drop RISK_MM variable
 
-It is given in the dataset description, that we should drop the
-`RISK_MM` feature variable from the dataset description. So, we should
-drop it as follows-
-:::
+데이터 집합 설명에 나와 있습니다. 데이터 집합을 삭제해야 합니다
+데이터 집합 설명의 'RISK_MM' 기능 변수. 그래서 저희가
+다음과 같이 떨어뜨립니다
 
-::: {.cell .code execution_count="7"}
 ``` python
 df.drop(['RISK_MM'], axis=1, inplace=True)
 ```
@@ -513,18 +481,15 @@ df.info()
     dtypes: float64(16), object(7)
     memory usage: 25.0+ MB
 :::
-:::
 
-::: {.cell .markdown}
 ### Types of variables
 
-In this section, I segregate the dataset into categorical and numerical
-variables. There are a mixture of categorical and numerical variables in
-the dataset. Categorical variables have data type object. Numerical
-variables have data type float64.
+이 섹션에서는 데이터 세트를 범주형과 숫자형으로 분리합니다
+변수. 범주형 변수와 숫자형 변수가 혼합되어 있습니다
+데이터 집합. 범주형 변수에는 데이터 유형 개체가 있습니다. 수치
+변수에 데이터 유형 float64가 있습니다.
 
-First of all, I will find categorical variables.
-:::
+우선 범주형 변수를 찾아보겠습니다.
 
 ::: {.cell .code execution_count="9"}
 ``` python
@@ -641,22 +606,22 @@ df[categorical].head()
 ::: {.cell .markdown}
 ### Summary of categorical variables
 
--   There is a date variable. It is denoted by `Date` column.
+- 날짜 변수가 있습니다. 날짜 열로 표시됩니다.
 
--   There are 6 categorical variables. These are given by `Location`,
-    `WindGustDir`, `WindDir9am`, `WindDir3pm`, `RainToday` and
-    `RainTomorrow`.
+- 6개의 범주형 변수가 있습니다. 이것들은 "위치"에 의해 주어집니다,
+바람의 구스티르 바람의 새벽 9시 바람의 오후 3시 비의 오늘 그리고
+내일은 비가 옵니다.
 
--   There are two binary categorical variables - `RainToday` and
-    `RainTomorrow`.
+- 두 개의 이진 범주형 변수가 있습니다 - 'Rain Today'와
+'Rain Tomorrow'.
 
--   `RainTomorrow` is the target variable.
+- 내일은 비(Rain Tomorrow)가 타깃 변수.
 :::
 
 ::: {.cell .markdown}
 ## Explore problems within categorical variables
 
-First, I will explore the categorical variables.
+먼저 범주형 변수에 대해 알아보겠습니다.
 
 ### Missing values in categorical variables
 :::
@@ -707,7 +672,7 @@ which contains missing values. These are `WindGustDir`, `WindDir9am`,
 ::: {.cell .markdown}
 ### Frequency counts of categorical variables
 
-Now, I will check the frequency counts of categorical variables.
+이제 범주형 변수의 빈도 수를 확인하겠습니다.
 :::
 
 ::: {.cell .code execution_count="13"}
@@ -6261,13 +6226,12 @@ print('GridSearch CV score on test set: {0:0.4f}'.format(grid_search.score(X_tes
 ::: {.cell .markdown}
 ### Comments {#comments}
 
--   Our original model test accuracy is 0.8501 while GridSearch CV
-    accuracy is 0.8507.
+- 원래 모델 테스트 정확도는 0.8501이지만 그리드 검색 CV
+정확도는 0.8507입니다.
 
--   We can see that GridSearch CV improve the performance for this
-    particular model.
+- 그리드 검색 CV가 이를 위한 성능을 향상시키는 것을 볼 수 있습니다
+특정 모델.
 :::
-
 ::: {.cell .markdown}
 # **21. Results and conclusion** `<a class="anchor" id="21">`{=html}`</a>`{=html} {#21-results-and-conclusion-}
 
@@ -6275,42 +6239,41 @@ print('GridSearch CV score on test set: {0:0.4f}'.format(grid_search.score(X_tes
 :::
 
 ::: {.cell .markdown}
-1.  The logistic regression model accuracy score is 0.8501. So, the
-    model does a very good job in predicting whether or not it will rain
-    tomorrow in Australia.
+1. 로지스틱 회귀 모형 정확도 점수는 0.8501입니다. 그래서 그
+    모델은 비가 올지 안 올지 예측하는 것을 매우 잘 합니다
+    내일 호주에서.
 
-2.  Small number of observations predict that there will be rain
-    tomorrow. Majority of observations predict that there will be no
-    rain tomorrow.
+2. 비가 올 것이라는 관측은 적음
+    내일. 대부분의 관측치는 다음과 같이 예측합니다
+    내일 비가 옵니다.
 
-3.  The model shows no signs of overfitting.
+3. 이 모델은 과적합의 징후가 없습니다.
 
-4.  Increasing the value of C results in higher test set accuracy and
-    also a slightly increased training set accuracy. So, we can conclude
-    that a more complex model should perform better.
+4. C 값을 증가시키면 테스트 세트의 정확도가 높아집니다
+    또한 교육 세트 정확도가 약간 향상되었습니다. 그래서 결론을 내릴 수 있습니다
+    더 복잡한 모델이 더 나은 성능을 발휘해야 합니다.
 
-5.  Increasing the threshold level results in increased accuracy.
+5. 임계값 레벨을 높이면 정확도가 높아집니다.
 
-6.  ROC AUC of our model approaches towards 1. So, we can conclude that
-    our classifier does a good job in predicting whether it will rain
-    tomorrow or not.
+6. 우리 모델의 ROCAUC는 1에 접근합니다. 그래서, 우리는 결론을 내릴 수 있습니다
+    우리의 분류기는 비가 올지 예측하는 것을 잘 합니다
+    내일이든 아니든.
 
-7.  Our original model accuracy score is 0.8501 whereas accuracy score
-    after RFECV is 0.8500. So, we can obtain approximately similar
-    accuracy but with reduced set of features.
+7. 원래 모델 정확도 점수는 0.8501인 반면 정확도 점수는
+    RFECV가 0.8500인 후. 그래서, 우리는 대략 비슷한 것을 얻을 수 있습니다
+    정확하지만 기능 집합이 감소합니다.
 
-8.  In the original model, we have FP = 1175 whereas FP1 = 1174. So, we
-    get approximately same number of false positives. Also, FN = 3087
-    whereas FN1 = 3091. So, we get slighly higher false negatives.
+8. 원래 모델에서는 FP = 1175인 반면 FP1 = 1174입니다. 그래서 저희가
+    거의 같은 수의 거짓 양성을 얻습니다. 또한, FN = 3087
+    반면 FN1 = 3091. 그래서 우리는 약간 더 높은 거짓 음성을 얻습니다.
 
-9.  Our, original model score is found to be 0.8476. The average
-    cross-validation score is 0.8474. So, we can conclude that
-    cross-validation does not result in performance improvement.
+9. 우리의 원래 모델 점수는 0.8476입니다. 평균적인
+    교차 검증 점수는 0.8474입니다. 그래서, 우리는 결론을 내릴 수 있습니다
+    교차 검증은 성능 향상으로 이어지지 않습니다.
 
-10. Our original model test accuracy is 0.8501 while GridSearch CV
-    accuracy is 0.8507. We can see that GridSearch CV improve the
-    performance for this particular model.
-:::
+10. 우리의 원래 모델 테스트 정확도는 0.8501인 반면 그리드 검색
+    정확도는 0.8507입니다. GridSearch CV가 개선되는 것을 볼 수 있습니다
+    특정 모델에 대한 성능입니다.
 
 ::: {.cell .markdown}
 # **22. References** `<a class="anchor" id="22">`{=html}`</a>`{=html} {#22-references-}
