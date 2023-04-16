@@ -17,28 +17,11 @@ jupyter:
   nbformat: 4
   nbformat_minor: 4
 ---
-
-::: {.cell .markdown}
-`<a class="anchor" id="0">`{=html}`</a>`{=html}
-
 # **Logistic Regression Classifier Tutorial with Python**
 
-Hello friends,
+안녕, 친구들,
 
-In this kernel, I implement Logistic Regression with Python and
-Scikit-Learn. I build a Logistic Regression classifier to predict
-whether or not it will rain tomorrow in Australia. I train a binary
-classification model using Logistic Regression.
-:::
-
-::: {.cell .markdown}
-**As always, I hope you find this kernel useful and your
-`<font color="red">`{=html}`<b>`{=html}UPVOTES`</b>`{=html}`</font>`{=html}
-would be highly appreciated**.
-:::
-
-::: {.cell .markdown}
-`<a class="anchor" id="0.1">`{=html}`</a>`{=html}
+이 커널에서 저는 Python과 Scikit-Learn으로 로지스틱 회귀 분석을 구현합니다. 저는 내일 호주에 비가 올지 여부를 예측하기 위해 로지스틱 회귀 분류기를 만듭니다. 로지스틱 회귀 분석을 사용하여 이항 분류 모델을 교육합니다.
 
 # **Table of Contents**
 
@@ -64,23 +47,11 @@ would be highly appreciated**.
 20. [Hyperparameter optimization using GridSearch CV](#20)
 21. [Results and conclusion](#21)
 22. [References](#22)
-:::
 
-::: {.cell .markdown}
+
 # **1. Introduction to Logistic Regression** `<a class="anchor" id="1">`{=html}`</a>`{=html} {#1-introduction-to-logistic-regression-}
 
-[Table of Contents](#0.1)
-
-When data scientists may come across a new classification problem, the
-first algorithm that may come across their mind is **Logistic
-Regression**. It is a supervised learning classification algorithm which
-is used to predict observations to a discrete set of classes.
-Practically, it is used to classify observations into different
-categories. Hence, its output is discrete in nature. **Logistic
-Regression** is also called **Logit Regression**. It is one of the most
-simple, straightforward and versatile classification algorithms which is
-used to solve classification problems.
-:::
+데이터 과학자들이 새로운 분류 문제를 발견할 수 있는 경우, 가장 먼저 떠오르는 알고리즘은 로지스틱 회귀 분석입니다. 개별 클래스 집합에 대한 관찰을 예측하는 데 사용되는 지도 학습 분류 알고리즘입니다. 실제로 관측치를 여러 범주로 분류하는 데 사용됩니다. 따라서, 그것의 출력은 본질적으로 별개입니다. 로지스틱 회귀 분석을 로짓 회귀 분석이라고도 합니다. 분류 문제를 해결하는 데 사용되는 가장 단순하고 간단하며 다용도의 분류 알고리즘 중 하나입니다.
 
 ::: {.cell .markdown}
 # **2. Logistic Regression intuition** `<a class="anchor" id="2">`{=html}`</a>`{=html} {#2-logistic-regression-intuition-}
