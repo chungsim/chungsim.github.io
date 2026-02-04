@@ -52,7 +52,7 @@
 
 ## 📚 Projects Index
 
-* [1. 프로젝트 제목 입력](#1-프로젝트-제목-입력)
+* [1. Signal Zero](https://github.com/chungsim/SignalZero)
 
 ---
 
